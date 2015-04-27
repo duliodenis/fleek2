@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C026E861AEC0B3000A5707E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C026E851AEC0B3000A5707E /* Fabric.framework */; };
+		6C026E881AEC0C3700A5707E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C026E871AEC0C3700A5707E /* Crashlytics.framework */; };
+		6C0CAA2A1AA277A600DBF036 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0CAA291AA277A600DBF036 /* FavoritesViewController.m */; };
+		6C2410341A7BED7D00D407EA /* LocationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2410331A7BED7D00D407EA /* LocationData.m */; };
+		6C40371F1A93D0860091F6FE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40371E1A93D0860091F6FE /* SWRevealViewController.m */; };
+		6C45E5F81A8593100021A6F7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E5F71A8593100021A6F7 /* Social.framework */; };
+		6C45E5FA1A8593190021A6F7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E5F91A8593190021A6F7 /* Accounts.framework */; };
+		6C45E5FC1A85932A0021A6F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E5FB1A85932A0021A6F7 /* SystemConfiguration.framework */; };
+		6C45E5FE1A8593350021A6F7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E5FD1A8593350021A6F7 /* StoreKit.framework */; };
+		6C45E6001A85933E0021A6F7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E5FF1A85933E0021A6F7 /* Security.framework */; };
+		6C45E6021A8593480021A6F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6011A8593480021A6F7 /* QuartzCore.framework */; };
+		6C45E6041A8593520021A6F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6031A8593520021A6F7 /* MobileCoreServices.framework */; };
+		6C45E6061A85935F0021A6F7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6051A85935F0021A6F7 /* libz.dylib */; };
+		6C45E6081A85937C0021A6F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6071A85937C0021A6F7 /* CoreGraphics.framework */; };
+		6C45E60A1A8593960021A6F7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6091A8593960021A6F7 /* CFNetwork.framework */; };
+		6C45E60C1A85939F0021A6F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E60B1A85939F0021A6F7 /* AudioToolbox.framework */; };
+		6C45E60E1A8593AF0021A6F7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E60D1A8593AF0021A6F7 /* libsqlite3.0.dylib */; };
+		6C45E6151A8593D50021A6F7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6101A8593D50021A6F7 /* Bolts.framework */; };
+		6C45E6161A8593D50021A6F7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6111A8593D50021A6F7 /* Parse.framework */; };
+		6C45E6171A8593D50021A6F7 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6121A8593D50021A6F7 /* ParseCrashReporting.framework */; };
+		6C45E6181A8593D50021A6F7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6131A8593D50021A6F7 /* ParseFacebookUtils.framework */; };
+		6C45E6191A8593D50021A6F7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E6141A8593D50021A6F7 /* ParseUI.framework */; };
+		6C46EEC61A8AC33B00FB74DD /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C46EEC51A8AC33B00FB74DD /* MapViewController.m */; };
+		6C52E10C1A95470900123AAB /* NicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C52E10B1A95470900123AAB /* NicknameViewController.m */; };
+		6C6D9E461A781A7D001B532D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D9E451A781A7D001B532D /* main.m */; };
+		6C6D9E491A781A7D001B532D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D9E481A781A7D001B532D /* AppDelegate.m */; };
+		6C6D9E4F1A781A7D001B532D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C6D9E4D1A781A7D001B532D /* Main.storyboard */; };
+		6C6D9E511A781A7D001B532D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6D9E501A781A7D001B532D /* Images.xcassets */; };
+		6C6D9E541A781A7D001B532D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6D9E521A781A7D001B532D /* LaunchScreen.xib */; };
+		6C6D9E601A781A7D001B532D /* fleekTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D9E5F1A781A7D001B532D /* fleekTests.m */; };
+		6C6D9E6A1A781A96001B532D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6D9E691A781A96001B532D /* MapKit.framework */; };
+		6C6D9E6C1A781AC2001B532D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6D9E6B1A781AC2001B532D /* CoreLocation.framework */; };
+		6CBC1C511A7A869E00673826 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBC1C501A7A869E00673826 /* SearchResultsViewController.m */; };
+		6CCEE71B1A814C9F000BCFCA /* LocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEE71A1A814C9F000BCFCA /* LocationAnnotationView.m */; };
+		6CD28AD21A97D46D0034F195 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD28AD11A97D46D0034F195 /* AboutViewController.m */; };
+		6CD28AD51A97E18E0034F195 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD28AD41A97E18E0034F195 /* FriendViewController.m */; };
+		6CDAF2081AA8E91F000F3F62 /* GeoFencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDAF2071AA8E91F000F3F62 /* GeoFencesViewController.m */; };
+		6CDB9DA11A9E9E27009A5B4C /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9D961A9E9E27009A5B4C /* NSMutableArray+SWUtilityButtons.m */; };
+		6CDB9DA21A9E9E27009A5B4C /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9D981A9E9E27009A5B4C /* SWCellScrollView.m */; };
+		6CDB9DA31A9E9E27009A5B4C /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9D9A1A9E9E27009A5B4C /* SWLongPressGestureRecognizer.m */; };
+		6CDB9DA41A9E9E27009A5B4C /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9D9C1A9E9E27009A5B4C /* SWTableViewCell.m */; };
+		6CDB9DA51A9E9E27009A5B4C /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9D9E1A9E9E27009A5B4C /* SWUtilityButtonTapGestureRecognizer.m */; };
+		6CDB9DA61A9E9E27009A5B4C /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9DA01A9E9E27009A5B4C /* SWUtilityButtonView.m */; };
+		6CDB9DA91A9E9FA3009A5B4C /* FavoritesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9DA81A9E9FA3009A5B4C /* FavoritesTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C6D9E5A1A781A7D001B532D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C6D9E381A781A7C001B532D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C6D9E3F1A781A7D001B532D;
+			remoteInfo = fleek;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6C026E851AEC0B3000A5707E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		6C026E871AEC0C3700A5707E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		6C0CAA281AA277A600DBF036 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		6C0CAA291AA277A600DBF036 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		6C2410321A7BED7D00D407EA /* LocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationData.h; sourceTree = "<group>"; };
+		6C2410331A7BED7D00D407EA /* LocationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationData.m; sourceTree = "<group>"; };
+		6C40371D1A93D0860091F6FE /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		6C40371E1A93D0860091F6FE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		6C45E5F71A8593100021A6F7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6C45E5F91A8593190021A6F7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6C45E5FB1A85932A0021A6F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6C45E5FD1A8593350021A6F7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6C45E5FF1A85933E0021A6F7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6C45E6011A8593480021A6F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6C45E6031A8593520021A6F7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6C45E6051A85935F0021A6F7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6C45E6071A85937C0021A6F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6C45E6091A8593960021A6F7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6C45E60B1A85939F0021A6F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6C45E60D1A8593AF0021A6F7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		6C45E6101A8593D50021A6F7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		6C45E6111A8593D50021A6F7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6C45E6121A8593D50021A6F7 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		6C45E6131A8593D50021A6F7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		6C45E6141A8593D50021A6F7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		6C46EEC41A8AC33B00FB74DD /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6C46EEC51A8AC33B00FB74DD /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6C52E10A1A95470900123AAB /* NicknameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NicknameViewController.h; sourceTree = "<group>"; };
+		6C52E10B1A95470900123AAB /* NicknameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NicknameViewController.m; sourceTree = "<group>"; };
+		6C6D9E401A781A7D001B532D /* fleek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fleek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C6D9E441A781A7D001B532D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6D9E451A781A7D001B532D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C6D9E471A781A7D001B532D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6C6D9E481A781A7D001B532D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6C6D9E4E1A781A7D001B532D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C6D9E501A781A7D001B532D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6C6D9E531A781A7D001B532D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6C6D9E591A781A7D001B532D /* fleekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fleekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C6D9E5E1A781A7D001B532D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6D9E5F1A781A7D001B532D /* fleekTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fleekTests.m; sourceTree = "<group>"; };
+		6C6D9E691A781A96001B532D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6C6D9E6B1A781AC2001B532D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6CBC1C4F1A7A869E00673826 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
+		6CBC1C501A7A869E00673826 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
+		6CCEE7191A814C9F000BCFCA /* LocationAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAnnotationView.h; sourceTree = "<group>"; };
+		6CCEE71A1A814C9F000BCFCA /* LocationAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAnnotationView.m; sourceTree = "<group>"; };
+		6CD28AD01A97D46D0034F195 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		6CD28AD11A97D46D0034F195 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		6CD28AD31A97E18E0034F195 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
+		6CD28AD41A97E18E0034F195 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
+		6CDAF2061AA8E91F000F3F62 /* GeoFencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFencesViewController.h; sourceTree = "<group>"; };
+		6CDAF2071AA8E91F000F3F62 /* GeoFencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFencesViewController.m; sourceTree = "<group>"; };
+		6CDB9D951A9E9E27009A5B4C /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SWUtilityButtons.h"; path = "SWTableViewCell/NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		6CDB9D961A9E9E27009A5B4C /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SWUtilityButtons.m"; path = "SWTableViewCell/NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		6CDB9D971A9E9E27009A5B4C /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWCellScrollView.h; path = SWTableViewCell/SWCellScrollView.h; sourceTree = "<group>"; };
+		6CDB9D981A9E9E27009A5B4C /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWCellScrollView.m; path = SWTableViewCell/SWCellScrollView.m; sourceTree = "<group>"; };
+		6CDB9D991A9E9E27009A5B4C /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWLongPressGestureRecognizer.h; path = SWTableViewCell/SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		6CDB9D9A1A9E9E27009A5B4C /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWLongPressGestureRecognizer.m; path = SWTableViewCell/SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		6CDB9D9B1A9E9E27009A5B4C /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWTableViewCell.h; path = SWTableViewCell/SWTableViewCell.h; sourceTree = "<group>"; };
+		6CDB9D9C1A9E9E27009A5B4C /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWTableViewCell.m; path = SWTableViewCell/SWTableViewCell.m; sourceTree = "<group>"; };
+		6CDB9D9D1A9E9E27009A5B4C /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonTapGestureRecognizer.h; path = SWTableViewCell/SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		6CDB9D9E1A9E9E27009A5B4C /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonTapGestureRecognizer.m; path = SWTableViewCell/SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		6CDB9D9F1A9E9E27009A5B4C /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonView.h; path = SWTableViewCell/SWUtilityButtonView.h; sourceTree = "<group>"; };
+		6CDB9DA01A9E9E27009A5B4C /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = SWTableViewCell/SWUtilityButtonView.m; sourceTree = "<group>"; };
+		6CDB9DA71A9E9FA3009A5B4C /* FavoritesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewCell.h; sourceTree = "<group>"; };
+		6CDB9DA81A9E9FA3009A5B4C /* FavoritesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C6D9E3D1A781A7D001B532D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C45E6151A8593D50021A6F7 /* Bolts.framework in Frameworks */,
+				6C45E60E1A8593AF0021A6F7 /* libsqlite3.0.dylib in Frameworks */,
+				6C45E6181A8593D50021A6F7 /* ParseFacebookUtils.framework in Frameworks */,
+				6C45E60C1A85939F0021A6F7 /* AudioToolbox.framework in Frameworks */,
+				6C45E6171A8593D50021A6F7 /* ParseCrashReporting.framework in Frameworks */,
+				6C45E60A1A8593960021A6F7 /* CFNetwork.framework in Frameworks */,
+				6C6D9E6A1A781A96001B532D /* MapKit.framework in Frameworks */,
+				6C45E6081A85937C0021A6F7 /* CoreGraphics.framework in Frameworks */,
+				6C45E6161A8593D50021A6F7 /* Parse.framework in Frameworks */,
+				6C45E6061A85935F0021A6F7 /* libz.dylib in Frameworks */,
+				6C45E6191A8593D50021A6F7 /* ParseUI.framework in Frameworks */,
+				6C45E6041A8593520021A6F7 /* MobileCoreServices.framework in Frameworks */,
+				6C45E6021A8593480021A6F7 /* QuartzCore.framework in Frameworks */,
+				6C026E881AEC0C3700A5707E /* Crashlytics.framework in Frameworks */,
+				6C026E861AEC0B3000A5707E /* Fabric.framework in Frameworks */,
+				6C45E6001A85933E0021A6F7 /* Security.framework in Frameworks */,
+				6C45E5FE1A8593350021A6F7 /* StoreKit.framework in Frameworks */,
+				6C45E5FC1A85932A0021A6F7 /* SystemConfiguration.framework in Frameworks */,
+				6C45E5FA1A8593190021A6F7 /* Accounts.framework in Frameworks */,
+				6C45E5F81A8593100021A6F7 /* Social.framework in Frameworks */,
+				6C6D9E6C1A781AC2001B532D /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C6D9E561A781A7D001B532D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C45E60F1A8593D50021A6F7 /* parse-library-1.6.2 */ = {
+			isa = PBXGroup;
+			children = (
+				6C45E6101A8593D50021A6F7 /* Bolts.framework */,
+				6C45E6111A8593D50021A6F7 /* Parse.framework */,
+				6C45E6121A8593D50021A6F7 /* ParseCrashReporting.framework */,
+				6C45E6131A8593D50021A6F7 /* ParseFacebookUtils.framework */,
+				6C45E6141A8593D50021A6F7 /* ParseUI.framework */,
+			);
+			path = "parse-library-1.6.2";
+			sourceTree = "<group>";
+		};
+		6C52E1091A951E8C00123AAB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6CD28AD01A97D46D0034F195 /* AboutViewController.h */,
+				6CD28AD11A97D46D0034F195 /* AboutViewController.m */,
+				6CD28AD31A97E18E0034F195 /* FriendViewController.h */,
+				6CD28AD41A97E18E0034F195 /* FriendViewController.m */,
+				6C46EEC41A8AC33B00FB74DD /* MapViewController.h */,
+				6C46EEC51A8AC33B00FB74DD /* MapViewController.m */,
+				6CBC1C4F1A7A869E00673826 /* SearchResultsViewController.h */,
+				6CBC1C501A7A869E00673826 /* SearchResultsViewController.m */,
+				6CDAF2061AA8E91F000F3F62 /* GeoFencesViewController.h */,
+				6CDAF2071AA8E91F000F3F62 /* GeoFencesViewController.m */,
+				6C0CAA281AA277A600DBF036 /* FavoritesViewController.h */,
+				6C0CAA291AA277A600DBF036 /* FavoritesViewController.m */,
+				6CDB9DA71A9E9FA3009A5B4C /* FavoritesTableViewCell.h */,
+				6CDB9DA81A9E9FA3009A5B4C /* FavoritesTableViewCell.m */,
+				6C52E10A1A95470900123AAB /* NicknameViewController.h */,
+				6C52E10B1A95470900123AAB /* NicknameViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6C6D9E371A781A7C001B532D = {
+			isa = PBXGroup;
+			children = (
+				6C6D9E421A781A7D001B532D /* fleek */,
+				6CD7387E1A7964150072D0DD /* Frameworks */,
+				6C6D9E5C1A781A7D001B532D /* fleekTests */,
+				6C6D9E411A781A7D001B532D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C6D9E411A781A7D001B532D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D9E401A781A7D001B532D /* fleek.app */,
+				6C6D9E591A781A7D001B532D /* fleekTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C6D9E421A781A7D001B532D /* fleek */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D9E4D1A781A7D001B532D /* Main.storyboard */,
+				6C52E1091A951E8C00123AAB /* ViewControllers */,
+				6CF2CA611AA37C0600776E77 /* Models */,
+				6C6D9E501A781A7D001B532D /* Images.xcassets */,
+				6C6D9E521A781A7D001B532D /* LaunchScreen.xib */,
+				6C6D9E431A781A7D001B532D /* Supporting Files */,
+			);
+			path = fleek;
+			sourceTree = "<group>";
+		};
+		6C6D9E431A781A7D001B532D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D9E471A781A7D001B532D /* AppDelegate.h */,
+				6C6D9E481A781A7D001B532D /* AppDelegate.m */,
+				6C40371D1A93D0860091F6FE /* SWRevealViewController.h */,
+				6C40371E1A93D0860091F6FE /* SWRevealViewController.m */,
+				6CDB9D941A9E9DB6009A5B4C /* SWTableViewCell */,
+				6C6D9E441A781A7D001B532D /* Info.plist */,
+				6C6D9E451A781A7D001B532D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C6D9E5C1A781A7D001B532D /* fleekTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D9E5F1A781A7D001B532D /* fleekTests.m */,
+				6C6D9E5D1A781A7D001B532D /* Supporting Files */,
+			);
+			path = fleekTests;
+			sourceTree = "<group>";
+		};
+		6C6D9E5D1A781A7D001B532D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D9E5E1A781A7D001B532D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CD7387E1A7964150072D0DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C026E871AEC0C3700A5707E /* Crashlytics.framework */,
+				6C026E851AEC0B3000A5707E /* Fabric.framework */,
+				6C45E60F1A8593D50021A6F7 /* parse-library-1.6.2 */,
+				6C45E60D1A8593AF0021A6F7 /* libsqlite3.0.dylib */,
+				6C45E60B1A85939F0021A6F7 /* AudioToolbox.framework */,
+				6C45E6091A8593960021A6F7 /* CFNetwork.framework */,
+				6C45E6071A85937C0021A6F7 /* CoreGraphics.framework */,
+				6C45E6051A85935F0021A6F7 /* libz.dylib */,
+				6C45E6031A8593520021A6F7 /* MobileCoreServices.framework */,
+				6C45E6011A8593480021A6F7 /* QuartzCore.framework */,
+				6C45E5FF1A85933E0021A6F7 /* Security.framework */,
+				6C45E5FD1A8593350021A6F7 /* StoreKit.framework */,
+				6C45E5FB1A85932A0021A6F7 /* SystemConfiguration.framework */,
+				6C45E5F91A8593190021A6F7 /* Accounts.framework */,
+				6C45E5F71A8593100021A6F7 /* Social.framework */,
+				6C6D9E6B1A781AC2001B532D /* CoreLocation.framework */,
+				6C6D9E691A781A96001B532D /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CDB9D941A9E9DB6009A5B4C /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6CDB9D951A9E9E27009A5B4C /* NSMutableArray+SWUtilityButtons.h */,
+				6CDB9D961A9E9E27009A5B4C /* NSMutableArray+SWUtilityButtons.m */,
+				6CDB9D971A9E9E27009A5B4C /* SWCellScrollView.h */,
+				6CDB9D981A9E9E27009A5B4C /* SWCellScrollView.m */,
+				6CDB9D991A9E9E27009A5B4C /* SWLongPressGestureRecognizer.h */,
+				6CDB9D9A1A9E9E27009A5B4C /* SWLongPressGestureRecognizer.m */,
+				6CDB9D9B1A9E9E27009A5B4C /* SWTableViewCell.h */,
+				6CDB9D9C1A9E9E27009A5B4C /* SWTableViewCell.m */,
+				6CDB9D9D1A9E9E27009A5B4C /* SWUtilityButtonTapGestureRecognizer.h */,
+				6CDB9D9E1A9E9E27009A5B4C /* SWUtilityButtonTapGestureRecognizer.m */,
+				6CDB9D9F1A9E9E27009A5B4C /* SWUtilityButtonView.h */,
+				6CDB9DA01A9E9E27009A5B4C /* SWUtilityButtonView.m */,
+			);
+			name = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		6CF2CA611AA37C0600776E77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6CCEE7191A814C9F000BCFCA /* LocationAnnotationView.h */,
+				6CCEE71A1A814C9F000BCFCA /* LocationAnnotationView.m */,
+				6C2410321A7BED7D00D407EA /* LocationData.h */,
+				6C2410331A7BED7D00D407EA /* LocationData.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C6D9E3F1A781A7D001B532D /* fleek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C6D9E631A781A7D001B532D /* Build configuration list for PBXNativeTarget "fleek" */;
+			buildPhases = (
+				6C6D9E3C1A781A7D001B532D /* Sources */,
+				6C6D9E3D1A781A7D001B532D /* Frameworks */,
+				6C6D9E3E1A781A7D001B532D /* Resources */,
+				6CD28ACD1A97CA700034F195 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fleek;
+			productName = fleek;
+			productReference = 6C6D9E401A781A7D001B532D /* fleek.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C6D9E581A781A7D001B532D /* fleekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C6D9E661A781A7D001B532D /* Build configuration list for PBXNativeTarget "fleekTests" */;
+			buildPhases = (
+				6C6D9E551A781A7D001B532D /* Sources */,
+				6C6D9E561A781A7D001B532D /* Frameworks */,
+				6C6D9E571A781A7D001B532D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C6D9E5B1A781A7D001B532D /* PBXTargetDependency */,
+			);
+			name = fleekTests;
+			productName = fleekTests;
+			productReference = 6C6D9E591A781A7D001B532D /* fleekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C6D9E381A781A7C001B532D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ddApps;
+				TargetAttributes = {
+					6C6D9E3F1A781A7D001B532D = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = FVTGESA2J4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					6C6D9E581A781A7D001B532D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 6C6D9E3F1A781A7D001B532D;
+					};
+				};
+			};
+			buildConfigurationList = 6C6D9E3B1A781A7D001B532D /* Build configuration list for PBXProject "fleek" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C6D9E371A781A7C001B532D;
+			productRefGroup = 6C6D9E411A781A7D001B532D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C6D9E3F1A781A7D001B532D /* fleek */,
+				6C6D9E581A781A7D001B532D /* fleekTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C6D9E3E1A781A7D001B532D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C6D9E4F1A781A7D001B532D /* Main.storyboard in Resources */,
+				6C6D9E541A781A7D001B532D /* LaunchScreen.xib in Resources */,
+				6C6D9E511A781A7D001B532D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C6D9E571A781A7D001B532D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CD28ACD1A97CA700034F195 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d3799712ccbbeb53c74ea0e5d477fbba0e9df26e 7f8144b638c1e140df18af3ba968ff98684c27dc9361717f80c52752b0f16390";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C6D9E3C1A781A7D001B532D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD28AD21A97D46D0034F195 /* AboutViewController.m in Sources */,
+				6C52E10C1A95470900123AAB /* NicknameViewController.m in Sources */,
+				6C40371F1A93D0860091F6FE /* SWRevealViewController.m in Sources */,
+				6CDB9DA91A9E9FA3009A5B4C /* FavoritesTableViewCell.m in Sources */,
+				6CDB9DA31A9E9E27009A5B4C /* SWLongPressGestureRecognizer.m in Sources */,
+				6CDB9DA11A9E9E27009A5B4C /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				6CDAF2081AA8E91F000F3F62 /* GeoFencesViewController.m in Sources */,
+				6CDB9DA61A9E9E27009A5B4C /* SWUtilityButtonView.m in Sources */,
+				6C6D9E491A781A7D001B532D /* AppDelegate.m in Sources */,
+				6C2410341A7BED7D00D407EA /* LocationData.m in Sources */,
+				6CDB9DA51A9E9E27009A5B4C /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
+				6C6D9E461A781A7D001B532D /* main.m in Sources */,
+				6CCEE71B1A814C9F000BCFCA /* LocationAnnotationView.m in Sources */,
+				6CBC1C511A7A869E00673826 /* SearchResultsViewController.m in Sources */,
+				6CDB9DA21A9E9E27009A5B4C /* SWCellScrollView.m in Sources */,
+				6C0CAA2A1AA277A600DBF036 /* FavoritesViewController.m in Sources */,
+				6CDB9DA41A9E9E27009A5B4C /* SWTableViewCell.m in Sources */,
+				6CD28AD51A97E18E0034F195 /* FriendViewController.m in Sources */,
+				6C46EEC61A8AC33B00FB74DD /* MapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C6D9E551A781A7D001B532D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C6D9E601A781A7D001B532D /* fleekTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C6D9E5B1A781A7D001B532D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C6D9E3F1A781A7D001B532D /* fleek */;
+			targetProxy = 6C6D9E5A1A781A7D001B532D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C6D9E4D1A781A7D001B532D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C6D9E4E1A781A7D001B532D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C6D9E521A781A7D001B532D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C6D9E531A781A7D001B532D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C6D9E611A781A7D001B532D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6C6D9E621A781A7D001B532D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C6D9E641A781A7D001B532D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.6.2",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = fleek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		6C6D9E651A781A7D001B532D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.6.2",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = fleek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		6C6D9E671A781A7D001B532D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = fleekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fleek.app/fleek";
+			};
+			name = Debug;
+		};
+		6C6D9E681A781A7D001B532D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = fleekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fleek.app/fleek";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C6D9E3B1A781A7D001B532D /* Build configuration list for PBXProject "fleek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6D9E611A781A7D001B532D /* Debug */,
+				6C6D9E621A781A7D001B532D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C6D9E631A781A7D001B532D /* Build configuration list for PBXNativeTarget "fleek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6D9E641A781A7D001B532D /* Debug */,
+				6C6D9E651A781A7D001B532D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C6D9E661A781A7D001B532D /* Build configuration list for PBXNativeTarget "fleekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6D9E671A781A7D001B532D /* Debug */,
+				6C6D9E681A781A7D001B532D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C6D9E381A781A7C001B532D /* Project object */;
+}

@@ -125,7 +125,7 @@ NSInteger const kNotifyPlace = 1;
 }
 
 
-- (void)monitorThisRegion {
+- (void)monitorThisRegion:(NSString *)locationName {
     //
     CLLocationCoordinate2D center;
     center.latitude = self.mapView.centerCoordinate.latitude;
@@ -135,12 +135,13 @@ NSInteger const kNotifyPlace = 1;
     [self.mapView addOverlay:circleOverlay];
     
     //set the region
-    static NSString *myGeoFenceName = @"exampleGeofence";
+    //static NSString *myGeoFenceName = @"exampleGeofence";
+    if (!locationName) locationName = @"exampleGeofence";
     
     CLLocationDistance radius = 300.0;
     CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:center
                                                                  radius:radius
-                                                             identifier:myGeoFenceName];
+                                                             identifier:locationName];
     
     [[self locationManager] startMonitoringForRegion:region];
 }
@@ -308,9 +309,7 @@ NSInteger const kNotifyPlace = 1;
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(UIAlertAction * action) {
                                                              // Start Monitoring Region
-                                                      //       CLRegion *regionToMonitor = [CLRegion alloc] init
-                                                      //       [self.locationManager startMonitoringForRegion:<#(CLRegion *)#>];
-                                                             [self monitorThisRegion];
+                                                             [self monitorThisRegion:place];
                                                          }];
     
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"No, not right now"

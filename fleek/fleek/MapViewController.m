@@ -351,4 +351,15 @@ NSInteger const kNotifyPlace = 1;
     return myPin;
 }
 
+
+#pragma mark - Location Monitoring Delegate Methods
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];  // in 10 seconds
+    localNotification.alertBody = [NSString stringWithFormat:@"You are near the %@", region.identifier];
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
 @end

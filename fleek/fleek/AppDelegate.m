@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LocationController.h"
 #import <Parse/Parse.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
@@ -26,7 +27,18 @@
     // Analytics Tracking App Opening
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // Responding to a location event
+    if (launchOptions[UIApplicationLaunchOptionsLocationKey]) {
+        LocationController *locationController = [LocationController sharedInstance];
+        [locationController.locationManager startUpdatingLocation];
+    }
+    
     return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    LocationController *locationController = [LocationController sharedInstance];
+    [locationController.locationManager stopUpdatingLocation];
 }
 
 @end

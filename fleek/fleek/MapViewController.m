@@ -15,12 +15,14 @@
 #import "GeoFencesViewController.h"
 #import "LocationAnnotationView.h"
 #import "SWRevealViewController.h"
+#import "LocationController.h"
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate, SWRevealViewControllerDelegate>
 @property (nonatomic) LocationAnnotationView *currentAnnotation;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButton;
 @property (nonatomic) NSMutableArray *geofences;
 @property (nonatomic) BOOL didStartMonitoringRegion;
+@property (nonatomic) LocationController *locationController;
 @end
 
 NSInteger const kFavoritePlace = 0;
@@ -68,8 +70,12 @@ NSInteger const kNotifyPlace = 1;
     self.menuBarButton.target = self.revealViewController;
     self.menuBarButton.action = @selector(revealToggle:);
     
+    self.locationController = [LocationController sharedInstance];
+    self.locationController.delegate = self;
+    self.mapView.showsUserLocation = YES;
+    
     // LocationManager to enable reporting the user's position
-    if ( [CLLocationManager locationServicesEnabled] ) {
+/*    if ( [CLLocationManager locationServicesEnabled] ) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
@@ -82,13 +88,14 @@ NSInteger const kNotifyPlace = 1;
             if (authorizationStatus == kCLAuthorizationStatusAuthorizedAlways ||
                 authorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
                 
-                [self.locationManager startUpdatingLocation];
-                self.mapView.showsUserLocation = YES;
-            }
+                [self.locationManager startUpdatingLocation]; */
+                //self.mapView.showsUserLocation = YES;
+/*            }
             
-            self.locationManager.distanceFilter = 1000;
+            self.locationManager.distanceFilter = 1000; // 1000 meters ~ 1/2 mile
             [self.locationManager startUpdatingLocation];
-            
+*/
+    /*
             CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.75, -73.98);
             CLLocationDistance radius = 30.0;
             
@@ -99,19 +106,26 @@ NSInteger const kNotifyPlace = 1;
             MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
             MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
             [self.mapView setRegion:region animated:YES];
-            
+
+    
             if ( [CLLocationManager isMonitoringAvailableForClass:[monitoringCheck class]] ) {
                 // Apple's documentation says to check authorization after determining monitoring is available.
                 //            CLLocationAccuracy accuracy = 1.0;
                 //            [self.locationManager startMonitoringForRegion:region desiredAccuracy:accuracy];
                 NSLog(@"Region monitoring available on this device.");
                 // Load Geofences
-                self.geofences = [NSMutableArray arrayWithArray:[[self.locationManager monitoredRegions] allObjects]];
+                self.geofences = [NSMutableArray arrayWithArray:[[self.locationController.locationManager monitoredRegions] allObjects]];
                 NSLog(@"geofences = %@", self.geofences);
             } else {
                 NSLog(@"Warning: Region monitoring not supported on this device."); }
         }
     }
+    */
+    
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.75, -73.98);
+    MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
+    MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
+    [self.mapView setRegion:region animated:YES];
     
     [self loadPOIs];
 }
@@ -143,7 +157,7 @@ NSInteger const kNotifyPlace = 1;
                                                                  radius:radius
                                                              identifier:locationName];
     
-    [[self locationManager] startMonitoringForRegion:region];
+    [[self.locationController locationManager] startMonitoringForRegion:region];
 }
 
 

@@ -11,6 +11,7 @@
 		6C026E881AEC0C3700A5707E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C026E871AEC0C3700A5707E /* Crashlytics.framework */; };
 		6C0CAA2A1AA277A600DBF036 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0CAA291AA277A600DBF036 /* FavoritesViewController.m */; };
 		6C2410341A7BED7D00D407EA /* LocationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2410331A7BED7D00D407EA /* LocationData.m */; };
+		6C2A7DC61AF6BDAA00287543 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A7DC51AF6BDAA00287543 /* LocationController.m */; };
 		6C40371F1A93D0860091F6FE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40371E1A93D0860091F6FE /* SWRevealViewController.m */; };
 		6C45E5F81A8593100021A6F7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E5F71A8593100021A6F7 /* Social.framework */; };
 		6C45E5FA1A8593190021A6F7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C45E5F91A8593190021A6F7 /* Accounts.framework */; };
@@ -70,6 +71,8 @@
 		6C0CAA291AA277A600DBF036 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		6C2410321A7BED7D00D407EA /* LocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationData.h; sourceTree = "<group>"; };
 		6C2410331A7BED7D00D407EA /* LocationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationData.m; sourceTree = "<group>"; };
+		6C2A7DC41AF6BDAA00287543 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		6C2A7DC51AF6BDAA00287543 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		6C40371D1A93D0860091F6FE /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		6C40371E1A93D0860091F6FE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		6C45E5F71A8593100021A6F7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -192,6 +195,8 @@
 				6CD28AD41A97E18E0034F195 /* FriendViewController.m */,
 				6C46EEC41A8AC33B00FB74DD /* MapViewController.h */,
 				6C46EEC51A8AC33B00FB74DD /* MapViewController.m */,
+				6C2A7DC41AF6BDAA00287543 /* LocationController.h */,
+				6C2A7DC51AF6BDAA00287543 /* LocationController.m */,
 				6CBC1C4F1A7A869E00673826 /* SearchResultsViewController.h */,
 				6CBC1C501A7A869E00673826 /* SearchResultsViewController.m */,
 				6CDAF2061AA8E91F000F3F62 /* GeoFencesViewController.h */,
@@ -449,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2A7DC61AF6BDAA00287543 /* LocationController.m in Sources */,
 				6CD28AD21A97D46D0034F195 /* AboutViewController.m in Sources */,
 				6C52E10C1A95470900123AAB /* NicknameViewController.m in Sources */,
 				6C40371F1A93D0860091F6FE /* SWRevealViewController.m in Sources */,

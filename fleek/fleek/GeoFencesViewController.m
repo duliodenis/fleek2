@@ -9,6 +9,7 @@
 #import "GeoFencesViewController.h"
 #import "MapViewController.h"
 #import "FavoritesTableViewCell.h"
+#import "LocationController.h"
 
 @interface GeoFencesViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate>
 @property (nonatomic) IBOutlet UITableView *tableView;
@@ -21,8 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSInteger myVCIndex = [self.navigationController.viewControllers indexOfObject:self];
-    MapViewController *mapVC = [self.navigationController.viewControllers objectAtIndex:myVCIndex-1];
+//    NSInteger myVCIndex = [self.navigationController.viewControllers indexOfObject:self];
+//    MapViewController *mapVC = [self.navigationController.viewControllers objectAtIndex:myVCIndex-1];
     
     // Set the delegate and datasource
     self.tableView.delegate = self;
@@ -35,7 +36,8 @@
     [self.tableView addSubview:self.backgroundImage];
     [self.tableView sendSubviewToBack:self.backgroundImage];
     
-    self.geofences = [NSMutableArray arrayWithArray:[[mapVC.locationManager monitoredRegions] allObjects]];
+    LocationController *locationController = [LocationController sharedInstance];
+    self.geofences = [NSMutableArray arrayWithArray:[[locationController.locationManager monitoredRegions] allObjects]];
 }
 
 
@@ -77,11 +79,12 @@
             NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
 
             CLRegion *region = [self.geofences objectAtIndex:index];
-            NSInteger myVCIndex = [self.navigationController.viewControllers indexOfObject:self];
-            MapViewController *mapVC = [self.navigationController.viewControllers objectAtIndex:myVCIndex-1];
+            //NSInteger myVCIndex = [self.navigationController.viewControllers indexOfObject:self];
+            //MapViewController *mapVC = [self.navigationController.viewControllers objectAtIndex:myVCIndex-1];
 
             // Stop Monitoring Region
-            [mapVC.locationManager stopMonitoringForRegion:region];
+            LocationController *locationController = [LocationController sharedInstance];
+            [locationController.locationManager stopMonitoringForRegion:region];
             
             // Update Table View
             [self.geofences removeObject:region];

@@ -9,6 +9,10 @@
 #import "LocationController.h"
 #import <MapKit/MapKit.h>
 
+@interface LocationController()
+@property (nonatomic) NSMutableArray *observers;
+@end
+
 @implementation LocationController
 
 + (LocationController *)sharedInstance {
@@ -34,16 +38,44 @@
             CLAuthorizationStatus authorizationStatus = [CLLocationManager authorizationStatus];
             if (authorizationStatus == kCLAuthorizationStatusAuthorizedAlways ||
                 authorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
-                
+                self.locationManager.distanceFilter = 1000; // 1000 meters ~ 1/2 mile
                 [self.locationManager startUpdatingLocation];
             }
-            
-            self.locationManager.distanceFilter = 1000; // 1000 meters ~ 1/2 mile
-            [self.locationManager startUpdatingLocation];
         }
+
+        self.observers = [NSMutableArray array];
     }
     
     return self;
+}
+
+- (void)addLocationCoordinatorDelegate:(id<LocationControllerDelegate>)delegate {
+    if (![self.observers containsObject:delegate]) {
+        [self.observers addObject:delegate];
+    }
+    
+    [self.locationManager startUpdatingLocation];
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    [self.locationManager stopUpdatingLocation];
+    for (id<LocationControllerDelegate> observer in self.observers) {
+        if (observer) {
+            [observer locationDidUpdateLocation:[locations lastObject]];
+        }
+    }
+}
+
+
+#pragma mark - Location Monitoring Delegate Methods
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];  // in 10 seconds
+    localNotification.alertBody = [NSString stringWithFormat:@"You are near the %@", region.identifier];
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 @end

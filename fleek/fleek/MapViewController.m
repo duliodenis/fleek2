@@ -17,7 +17,7 @@
 #import "SWRevealViewController.h"
 #import "LocationController.h"
 
-@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate, SWRevealViewControllerDelegate>
+@interface MapViewController () <LocationControllerDelegate, MKMapViewDelegate, SWRevealViewControllerDelegate>
 @property (nonatomic) LocationAnnotationView *currentAnnotation;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButton;
 @property (nonatomic) NSMutableArray *geofences;
@@ -71,7 +71,9 @@ NSInteger const kNotifyPlace = 1;
     self.menuBarButton.action = @selector(revealToggle:);
     
     self.locationController = [LocationController sharedInstance];
-    self.locationController.delegate = self;
+    [[LocationController sharedInstance] addLocationCoordinatorDelegate:self];
+    
+    // self.locationController.delegate = self;
     self.mapView.showsUserLocation = YES;
     
     // LocationManager to enable reporting the user's position
@@ -122,10 +124,10 @@ NSInteger const kNotifyPlace = 1;
     }
     */
     
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.75, -73.98);
-    MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
-    MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
-    [self.mapView setRegion:region animated:YES];
+    //CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.75, -73.98);
+    //MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
+    //MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
+    //[self.mapView setRegion:region animated:YES];
     
     [self loadPOIs];
 }
@@ -366,14 +368,27 @@ NSInteger const kNotifyPlace = 1;
 }
 
 
-#pragma mark - Location Monitoring Delegate Methods
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    [self updateLocation:(CLLocation *)userLocation];
+}
 
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
-    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];  // in 10 seconds
-    localNotification.alertBody = [NSString stringWithFormat:@"You are near the %@", region.identifier];
-    localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+
+#pragma mark - Location Controller Delegate Method
+
+- (void)locationDidUpdateLocation:(CLLocation *)location {
+    [self updateLocation:location];
+}
+
+
+- (void)updateLocation:(CLLocation *)location {
+    CLLocationCoordinate2D myLocation;
+    myLocation.latitude = location.coordinate.latitude;
+    myLocation.longitude = location.coordinate.longitude;
+    
+    MKCoordinateRegion region;
+    region.span = MKCoordinateSpanMake(0.01, 0.01);
+    region.center = myLocation;
+    [self.mapView setRegion:region animated:YES];
 }
 
 @end

@@ -22,8 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    NSInteger myVCIndex = [self.navigationController.viewControllers indexOfObject:self];
-//    MapViewController *mapVC = [self.navigationController.viewControllers objectAtIndex:myVCIndex-1];
     
     // Set the delegate and datasource
     self.tableView.delegate = self;

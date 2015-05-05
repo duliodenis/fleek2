@@ -14,6 +14,7 @@
 #import "LocationAnnotationView.h"
 #import "SWTableViewCell.h"
 #import "FavoritesTableViewCell.h"
+#import "LocationController.h"
 
 
 @interface SearchResultsViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, SWTableViewCellDelegate>

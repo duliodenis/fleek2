@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButton;
 @property (nonatomic) NSMutableArray *geofences;
 @property (nonatomic) BOOL didStartMonitoringRegion;
-@property (nonatomic) LocationController *locationController;
 @end
 
 NSInteger const kFavoritePlace = 0;
@@ -70,64 +69,9 @@ NSInteger const kNotifyPlace = 1;
     self.menuBarButton.target = self.revealViewController;
     self.menuBarButton.action = @selector(revealToggle:);
     
-    self.locationController = [LocationController sharedInstance];
+    // the Location Controller Singleton
     [[LocationController sharedInstance] addLocationCoordinatorDelegate:self];
-    
-    // self.locationController.delegate = self;
-    self.mapView.showsUserLocation = YES;
-    
-    // LocationManager to enable reporting the user's position
-/*    if ( [CLLocationManager locationServicesEnabled] ) {
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-        
-        // New in iOS 8
-        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [self.locationManager requestWhenInUseAuthorization];
-            
-            CLAuthorizationStatus authorizationStatus = [CLLocationManager authorizationStatus];
-            if (authorizationStatus == kCLAuthorizationStatusAuthorizedAlways ||
-                authorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
-                
-                [self.locationManager startUpdatingLocation]; */
-                //self.mapView.showsUserLocation = YES;
-/*            }
-            
-            self.locationManager.distanceFilter = 1000; // 1000 meters ~ 1/2 mile
-            [self.locationManager startUpdatingLocation];
-*/
-    /*
-            CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.75, -73.98);
-            CLLocationDistance radius = 30.0;
-            
-            CLCircularRegion *monitoringCheck = [[CLCircularRegion alloc] initWithCenter:center
-                                                                          radius:radius
-                                                                      identifier:@"userRegion"];
-            
-            MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
-            MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
-            [self.mapView setRegion:region animated:YES];
-
-    
-            if ( [CLLocationManager isMonitoringAvailableForClass:[monitoringCheck class]] ) {
-                // Apple's documentation says to check authorization after determining monitoring is available.
-                //            CLLocationAccuracy accuracy = 1.0;
-                //            [self.locationManager startMonitoringForRegion:region desiredAccuracy:accuracy];
-                NSLog(@"Region monitoring available on this device.");
-                // Load Geofences
-                self.geofences = [NSMutableArray arrayWithArray:[[self.locationController.locationManager monitoredRegions] allObjects]];
-                NSLog(@"geofences = %@", self.geofences);
-            } else {
-                NSLog(@"Warning: Region monitoring not supported on this device."); }
-        }
-    }
-    */
-    
-    //CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.75, -73.98);
-    //MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
-    //MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
-    //[self.mapView setRegion:region animated:YES];
+    self.mapView.showsUserLocation = YES;    
     
     [self loadPOIs];
 }
@@ -142,7 +86,6 @@ NSInteger const kNotifyPlace = 1;
 
 
 - (void)monitorThisRegion:(NSString *)locationName {
-    //
     CLLocationCoordinate2D center;
     center.latitude = self.mapView.centerCoordinate.latitude;
     center.longitude = self.mapView.centerCoordinate.longitude;
@@ -150,16 +93,14 @@ NSInteger const kNotifyPlace = 1;
     [circleOverlay setTitle:@"Circle"];
     [self.mapView addOverlay:circleOverlay];
     
-    //set the region
-    //static NSString *myGeoFenceName = @"exampleGeofence";
-    if (!locationName) locationName = @"exampleGeofence";
+    if (!locationName) locationName = @"Untitled Region";
     
     CLLocationDistance radius = 300.0;
     CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:center
                                                                  radius:radius
                                                              identifier:locationName];
     
-    [[self.locationController locationManager] startMonitoringForRegion:region];
+    [[[LocationController sharedInstance] locationManager] startMonitoringForRegion:region];
 }
 
 

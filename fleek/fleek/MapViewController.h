@@ -12,5 +12,4 @@
 
 @interface MapViewController : UIViewController
 @property (nonatomic) IBOutlet MKMapView *mapView;
-// @property (nonatomic) CLLocationManager *locationManager;
 @end

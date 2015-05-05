@@ -40,6 +40,13 @@
                 authorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
                 self.locationManager.distanceFilter = 1000; // 1000 meters ~ 1/2 mile
                 [self.locationManager startUpdatingLocation];
+                
+                
+                // starts monitoring for all regions everytime
+                NSMutableArray *geofences = [NSMutableArray arrayWithArray:[[self.locationManager monitoredRegions] allObjects]];
+                for (CLRegion *region in geofences) {
+                    [self.locationManager startMonitoringForRegion:region];
+                }
             }
         }
 

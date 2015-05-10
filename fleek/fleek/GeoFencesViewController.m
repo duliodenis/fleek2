@@ -76,7 +76,7 @@
             // Remove button is pressed
             NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
 
-            CLRegion *region = [self.geofences objectAtIndex:index];
+            CLRegion *region = [self.geofences objectAtIndex:cellIndexPath.row];
             //NSInteger myVCIndex = [self.navigationController.viewControllers indexOfObject:self];
             //MapViewController *mapVC = [self.navigationController.viewControllers objectAtIndex:myVCIndex-1];
 
